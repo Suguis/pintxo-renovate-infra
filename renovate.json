@@ -9,5 +9,19 @@
     "fileMatch": [
       "apps/.+\\.yaml$"
     ]
-  }
+  },
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "manifests/argocd/kustomization\\.yaml$"
+      ],
+      "matchStrings": [
+        "https://raw\\.githubusercontent\\.com/argoproj/argo-cd/v(?<currentValue>\\S+)/manifests/install\\.yaml"
+      ],
+      "datasourceTemplate": "github-tags",
+      "depNameTemplate": "argoproj/argo-cd",
+      "versioningTemplate": "semver"
+    }
+  ]
 }
