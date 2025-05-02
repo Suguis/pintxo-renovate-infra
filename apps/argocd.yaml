@@ -12,8 +12,6 @@ spec:
     path: manifests/argocd
     repoURL: https://github.com/Suguis/pintxo-renovate-infra
     targetRevision: main
-    directory:
-      recurse: true
   syncPolicy:
     automated:
       selfHeal: true
