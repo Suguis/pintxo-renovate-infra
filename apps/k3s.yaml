@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx
+  name: k3s
   namespace: argocd
 spec:
   destination:
-    namespace: nginx
+    namespace: system-upgrade
     server: https://kubernetes.default.svc
   project: default
   source:
