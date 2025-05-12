@@ -22,6 +22,18 @@
       "datasourceTemplate": "github-tags",
       "depNameTemplate": "argoproj/argo-cd",
       "versioningTemplate": "semver"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^k3s/kustomization\\.yaml$"
+      ],
+      "matchStrings": [
+        "https://github\\.com/rancher/system-upgrade-controller/releases/download/v(?<currentValue>\\S+)/.*\\.yaml"
+      ],
+      "depNameTemplate": "rancher/system-upgrade-controller",
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "semver"
     }
   ]
 }
