@@ -34,6 +34,20 @@
       "depNameTemplate": "rancher/system-upgrade-controller",
       "datasourceTemplate": "github-tags",
       "versioningTemplate": "semver"
+    },
+    {
+      "customType": "jsonata",
+      "fileFormat": "yaml",
+      "fileMatch": [
+        "manifests/k3s/agent-plan\\.yaml$",
+        "manifests/k3s/server-plan\\.yaml$"
+      ],
+      "matchStrings": [
+        "spec.{ \"depName\": \"k3s\", \"currentValue\": version }"
+      ],
+      "depNameTemplate": "k3s",
+      "versioningTemplate": "semver-coerced",
+      "datasourceTemplate": "custom.k3s"
     }
   ]
 }
