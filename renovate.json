@@ -26,7 +26,7 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "^k3s/kustomization\\.yaml$"
+        "manifests/k3s/kustomization\\.yaml$"
       ],
       "matchStrings": [
         "https://github\\.com/rancher/system-upgrade-controller/releases/download/v(?<currentValue>\\S+)/.*\\.yaml"
